@@ -58,5 +58,6 @@
     "__config_site": "cpp",
     "iomanip": "cpp",
     "iterator": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

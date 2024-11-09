@@ -24,7 +24,7 @@ int main() {
 
     cout << a << " " << b << endl;
 
-    // TODO: 
+    // TODO: a와 b의 순서를 바꾸기
     MySwap(a, b);
     MySwapPtr(&a, &b);
 
