@@ -1,0 +1,2 @@
+= nullptr;
+    ptr = &valu
