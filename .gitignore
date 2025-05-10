@@ -1,0 +1,53 @@
+# 빌드된 실행 파일
+*.exe
+*.out
+*.app
+
+# 오브젝트 파일
+*.o
+*.obj
+
+# 라이브러리 파일
+*.a
+*.lib
+*.so
+*.dylib
+
+# 디버그/릴리스 빌드 디렉토리
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# CMake 생성 파일
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio 관련 파일
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.idb
+*.pdb
+
+# Xcode 관련 파일
+*.xcodeproj/
+*.xcworkspace/
+build/
+
+# 기타 임시 파일
+*.log
+*.tlog
+*.cache
+
+# 종속성 디렉토리 (예: vcpkg, conan)
+vcpkg/
+conanbuildinfo.txt
+conaninfo.txt
