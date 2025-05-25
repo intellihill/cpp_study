@@ -1,10 +1,25 @@
 #include <iostream>
-#include </Users/jundaero/Desktop/opensource/json/include/nlohmann>
 
 using namespace std;
-using json = nlohmann::json;
+
+class Car {
+private:
+    int year= 1000;
+public:
+    Car(int _year) : year(_year) {
+        cout << "Original constructor year: " << year << "\n";
+    }
+    void showYear() {
+        cout << "Year is: " << year << endl;
+    }
+};
 
 
 int main() {
+    Car car(2000);
+
+    // car.showYear();
+
+
     return 0;
 }
