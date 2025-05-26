@@ -18,8 +18,7 @@ struct Color {
 int main() {
     int width= 256;
     int height= 256;
-    std::vector<std::vector<Color>> canvas(height, std::vector<Color>
-    (width, Color(0, 0, 0)));
+    std::vector<std::vector<Color>> canvas(height, std::vector<Color>(width, Color(0, 0, 0)));
     
     // 원 정의 (중심, 반지름)
     Vec2 center(128, 128);
