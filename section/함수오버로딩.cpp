@@ -24,10 +24,15 @@ double add(double x, double y) {
     return x + y;
 }
 
+void print(std::string str) {}
+void print(char ch= '') {}
+
 int main() {
 
     add (1, 2);
     add (3.0, 4.0);
+
+    print();
 
     return 0;
 }
