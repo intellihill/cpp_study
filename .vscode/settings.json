@@ -68,7 +68,10 @@
     "unordered_set": "cpp",
     "forward_list": "cpp",
     "list": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "syncstream": "cpp",
+    "valarray": "cpp",
+    "future": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
