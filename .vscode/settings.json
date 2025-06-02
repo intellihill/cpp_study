@@ -71,7 +71,9 @@
     "regex": "cpp",
     "syncstream": "cpp",
     "valarray": "cpp",
-    "future": "cpp"
+    "future": "cpp",
+    "version": "cpp",
+    "chrono": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
