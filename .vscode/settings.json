@@ -74,7 +74,8 @@
     "future": "cpp",
     "version": "cpp",
     "chrono": "cpp",
-    "csignal": "cpp"
+    "csignal": "cpp",
+    "cassert": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
