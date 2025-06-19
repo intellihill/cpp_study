@@ -52,10 +52,22 @@ int main() {
      * 2차원 벡터의 요소는 matrix2[i][j] 형태로 접근한다.
      * 인덱스가 벗어나지 않도록 주의해야 한다.
      */
+    
+    // 2x3 벡터 초기화
     std::vector<std::vector<int>> matrix2 = {
         {1, 2, 3},
         {4, 5, 6}
-    }
+    };
 
+    // 요소 수정
+    matrix2[0][1]= 10; // 첫 번째 행, 두 번째 열의 값을 10으로 변경
+
+    // 출력
+    for (const auto& row : matrix2) {
+        for (int val : row) {
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+    }
     return 0;
 }
