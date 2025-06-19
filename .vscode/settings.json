@@ -75,7 +75,8 @@
     "version": "cpp",
     "chrono": "cpp",
     "csignal": "cpp",
-    "cassert": "cpp"
+    "cassert": "cpp",
+    "random": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
