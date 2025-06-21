@@ -1,7 +1,15 @@
+//
+//  vector_about.cpp
+//  grok
+//
+//  Created by 정대로 on 6/21/25.
+//
+
 #include <iostream>
 #include <vector>
+#include "vector_about.h"
 
-int main() {
+void vector_about::process() {
     /**
      * 2차원 vector 선언 및 초기화
      */
@@ -69,5 +77,4 @@ int main() {
         }
         std::cout << std::endl;
     }
-    return 0;
 }
