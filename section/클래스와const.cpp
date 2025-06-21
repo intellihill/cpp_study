@@ -1,22 +1,30 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class something{
 public:
-    int m_value= 0;
+    string m_value= "default";
 
-    void setValue(int value) {
-        m_value= value;
-    }
-    int getValue() {
+    const string& getValue() const {
+        cout << "const version" << endl;
         return m_value;
     }
+    string& getValue() {
+        cout << "not const version" << endl;
+        return m_value;
+    }
+
 };
+
 
 int main() {
 
-    const something st;
+    something st;
+    st.getValue();
 
-    cout << something.getValue() << endl;
+    const something st2;
+    st2.getValue();
+
     return 0;
 }
