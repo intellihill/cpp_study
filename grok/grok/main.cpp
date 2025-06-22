@@ -16,6 +16,7 @@ int main() {
     va.process();
     
     /* examine about const_function */
+    // const function은 setValue function is not possible
     const Const_func cf(10);
     std::cout << "Const_func::getValue: " << cf.getValue() << std::endl;
     
