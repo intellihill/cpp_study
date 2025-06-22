@@ -1,34 +1,55 @@
 #include <iostream>
+
 using namespace std;
 
 class Something {
-public:
-    int m_value= 1;
+
+    // static 멤버 변수는 초기화가 불가능하므로 밑에 처럼 가능하게 할 수 있음
+    class _init {
+    public:
+        _init() {
+            s_value= 1234;
+        }
+    };
+
+private:
     static int s_value;
+    int m_value;
+
+    static _init s_initializer;
+
+public:
+    // static 데이타는 this를 못 쓴다.
+     static int getValue() {
+        return s_value;
+    }
+    int temp() {
+        return this->s_value;
+    }
+
+
 };
 
-int Something::s_value= 1;
-
-int generateID() {
-    static int s_id= 0;
-    return ++s_id;
-}
+int Something::s_value= 1024;
+Something::_init Something::s_initializer;
 
 int main() {
-    cout << generateID() << endl;
-    cout << generateID() << endl;
-    cout << generateID() << endl;
+    cout << Something::getValue() << endl;
 
-    Something st1;
-    Something st2;
+    Something st1, st2;
+    cout << st1.getValue() << endl;
 
-    st1.m_value= 2;
-    st1.s_value= 2;
+    // function pointer
+    // member function 의 포인터를 가지고오기
+    // int (Something::*fptr1)()= &s1.temp; // 불가능
+    int (Something::*fptr1)()= &Something::temp;
 
-    cout << &st1.m_value << " " << st1.m_value << endl;
-    cout << &st2.m_value << " " << st2.m_value << endl;
+    cout << (st2.*fptr1)() << endl;
 
-    cout << &st1.s_value << " " << st1.s_value << endl;
-    cout << &st2.s_value << " " << st2.s_value << endl;
+    int (*fptr2)()= &Something::getValue;
+
+    cout << fptr2() << endl;
+
+
     return 0;
 }
