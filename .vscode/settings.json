@@ -77,7 +77,9 @@
     "csignal": "cpp",
     "cassert": "cpp",
     "random": "cpp",
-    "compare": "cpp"
+    "compare": "cpp",
+    "any": "cpp",
+    "utility": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
