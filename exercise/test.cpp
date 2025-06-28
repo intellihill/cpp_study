@@ -24,7 +24,7 @@ public:
     //     cout << this->t_number << endl;
     // }
 
-    int operator [] (int value) {
+    int& operator [] (int value) {
         cout << "value: " << value << endl;
         cout << "this.t_data: " << this->t_data[value] << endl;
         t_data[value] = value;
@@ -42,6 +42,9 @@ int main() {
 
     Test t1(2);
     cout << "main:" << t1[2] << endl;
+
+    t1[2]= 4;
+    // cout << "change:" << t1[2] << endl;
 
 
     return 0;
