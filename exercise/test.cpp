@@ -30,13 +30,16 @@ public:
         t_data[value] = value;
         return t_data[value];
     }
-
-    
-
 private:
     int t_number;
     int* t_data;
 };
+
+std::ostream& operator<<(std::ostream& os, const vector& v) {
+    cout << "test" << endl;
+
+    return os;
+}
 
 int main() {
 
@@ -44,7 +47,8 @@ int main() {
     cout << "main:" << t1[2] << endl;
 
     t1[2]= 4;
-    // cout << "change:" << t1[2] << endl;
+
+    cout << t1[1] << endl;
 
 
     return 0;
