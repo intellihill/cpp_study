@@ -10,6 +10,7 @@
 #include "vector_about.h"
 #include "Const_func.h"
 #include "operator/operator_func.hpp"
+#include "friend/friend.hpp"
 
 
 int main() {
@@ -30,6 +31,11 @@ int main() {
     std::cout << "af_result1.getValue(): " << af_result1.getValue() << std::endl;
     std::cout << "af_result2.getValue(): " << af_result2.getValue() << std::endl;
     
+    /* examine friend */
+    MyFriend mf;
+    showSecret(mf);
+    MyFriendA mfa;
+    mfa.display(mf);
     
     return 0;
 }
