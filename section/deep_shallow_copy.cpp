@@ -22,6 +22,52 @@ public:
         m_data[m_length - 1] = '\0';
     }
 
+    // copy constructor
+    MyString(const MyString &source) {
+        cout << "Copy constructor" << endl;
+
+        m_length = source.m_length;
+
+        if (source.m_data != nullptr) {
+            m_data = new char[m_length];
+
+            for (int i=0; i<m_length; ++i) {
+                m_data[i] = source.m_data[i];
+            }
+        } else {
+            m_data = nullptr;
+        }
+    }
+
+    MyString operator = (const MyString & source) {
+        cout << "Assignment operator " << endl;
+        // shallow copy
+        // *this -> m_data = source.m_data;
+        // this -> m_length = source.m_length;
+
+
+        // parent self-assignment
+        if (this == &source) { // prevent self-assignment
+            return *this;
+        }
+
+        delete[] m_data;
+
+        m_length = source.m_length;
+
+        if (source.m_data != nullptr) {
+            m_data = new char[m_length];
+
+            for (int i=0; i<m_length; ++i) {
+                m_data[i] = source.m_data[i];
+            }
+        } else {
+            m_data = nullptr;
+        }
+
+        return *this;
+    }
+
     ~MyString() {
         delete[] m_data;
     }
