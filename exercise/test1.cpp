@@ -2,9 +2,10 @@
 using namespace std;
 
 int main() {
-    int i1= 3.14;
+    int i1= -5;
+    
 
-    cout << i1 << endl;
+    cout << (5/3) << endl;
     
     return 0;
 }
