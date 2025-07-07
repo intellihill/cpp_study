@@ -2,10 +2,8 @@
 using namespace std;
 
 int main() {
-    int i1= -5;
-    
 
-    cout << (5/3) << endl;
+    cout << (not true == true) << endl;
     
     return 0;
 }
