@@ -11,6 +11,7 @@
 #include "Const_func.h"
 #include "operator/operator_func.hpp"
 #include "friend/friend.hpp"
+#include "reference/reference.hpp"
 
 
 int main() {
@@ -36,6 +37,10 @@ int main() {
     showSecret(mf);
     MyFriendA mfa;
     mfa.display(mf);
+    
+    /* examine reference */
+    reference rf;
+    rf.process();
     
     return 0;
 }
