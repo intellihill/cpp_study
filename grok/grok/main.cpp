@@ -12,6 +12,7 @@
 #include "operator/operator_func.hpp"
 #include "friend/friend.hpp"
 #include "reference/reference.hpp"
+#include "dereference/dereference.hpp"
 
 
 int main() {
@@ -41,6 +42,12 @@ int main() {
     /* examine reference */
     reference rf;
     rf.process();
+    
+    /* examine dereference */
+    dereference drf;
+    drf.process1();
+    drf.process2();
+    drf.process3();
     
     return 0;
 }
