@@ -6,7 +6,6 @@ public:
     vector(int size) : my_size(size), data(new double[size]) {
         std::cout << "Constructor: " << my_size << std::endl;
     }
-    
     ~vector() {
         std::cout << "DeConstructor: " << std::endl;
         delete [] data;

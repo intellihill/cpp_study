@@ -7,8 +7,16 @@
 
 #include <iostream>
 
+void increment(int& x) {
+    x++;
+}
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    int i= 4;
+    increment(i);
+    std::cout << "i is " << i << '\n';
+    
+    
     return 0;
 }
