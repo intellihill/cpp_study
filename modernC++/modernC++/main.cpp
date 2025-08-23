@@ -6,17 +6,14 @@
 //
 
 #include <iostream>
-
-void increment(int& x) {
-    x++;
-}
+#include <fstream>
 
 int main(int argc, const char * argv[]) {
     
-    int i= 4;
-    increment(i);
-    std::cout << "i is " << i << '\n';
+    std::ofstream square_file("squares.txt");
     
-    
+    for (int i= 0; i < 10; ++i) {
+        square_file << i << "^2 = " << i*i << '\n';
+    }
     return 0;
 }
