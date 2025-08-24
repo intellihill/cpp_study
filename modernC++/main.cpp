@@ -1,4 +1,6 @@
+#include <iostream>
 #include <fstream>
+#include <memory>
 
 int main() {
 
@@ -13,6 +15,11 @@ int main() {
     ifs >> v[i];
     file << i << '\n';
   }
+
+  std::unique_ptr<double> dp{new double};
+  *dp= 7;
+
+  std::cout << "The value of *dp is " << *dp << std::endl;
 
 
   return 0;
