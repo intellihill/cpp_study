@@ -1,26 +1,19 @@
 #include <iostream>
-#include <fstream>
 #include <memory>
+
+std::shared_ptr<double> f() {
+  std::shared_ptr<double> p1{new double};
+  std::shared_ptr<double> p2{new double}, p3= p1;
+
+  std::cout << "p3.use_count() = " << p3.use_count() << std::endl;
+
+  return p3;
+}
 
 int main() {
 
-  std::ifstream ifs("some_aray.txt");
-  std::ofstream file("outstream.txt");
-  int size;
-
-  ifs >> size;
-
-  float* v= new float[size];
-  for (int i= 0; i < size; ++i) {
-    ifs >> v[i];
-    file << i << '\n';
-  }
-
-  std::unique_ptr<double> dp{new double};
-  *dp= 7;
-
-  std::cout << "The value of *dp is " << *dp << std::endl;
-
+  std::shared_ptr<double> p= f();
+  std::cout << "p.use_count() = " << p.use_count() << std::endl;
 
   return 0;
 }
