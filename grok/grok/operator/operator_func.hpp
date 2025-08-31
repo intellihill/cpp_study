@@ -17,7 +17,7 @@ public:
     friend operator_func operator+(const operator_func& lhs, const operator_func& rhs);
     int getValue();
 private:
-    int m_value=0;
+    int m_value= 0;
     int* m_data;
 };
 

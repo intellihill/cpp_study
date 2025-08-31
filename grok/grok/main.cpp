@@ -13,6 +13,7 @@
 #include "friend/friend.hpp"
 #include "reference/reference.hpp"
 #include "dereference/dereference.hpp"
+#include "static/static_member.hpp"
 
 
 int main() {
@@ -48,6 +49,18 @@ int main() {
     drf.process1();
     drf.process2();
     drf.process3();
+    
+    /* examine static_member */
+    static_member obj1(1); // 객체1 생성
+    static_member obj2(2); // 객체2 생성
+    
+    // static 변수 변경: obj1 통해 변경하면 obj2에도 변경
+    obj1.staticVar= 10;
+    std::cout << "obj2의 staticVar: " << obj2.staticVar << std::endl;
+    std::cout << "클래스 직접 접근: " << static_member::staticVar << std::endl;
+    
+    obj1.instanceVar= 5;
+    std::cout << "obj2의 instanceVar: " << obj2.instanceVar << std::endl;
     
     return 0;
 }
