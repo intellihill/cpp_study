@@ -14,6 +14,7 @@ public:
 
     void moveTo(const int & x_target, const int & y_target) {
         m_x = x_target;
+        
         m_y = y_target;
     }
 

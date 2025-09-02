@@ -83,6 +83,8 @@ public:
 int main() {
     MyString hello("Hello");
 
+    MyString str1(hello); // MyString str1 = hello와 같다
+
     cout << (int*)hello.m_data << endl;
     cout << hello.getString() << endl;
 
