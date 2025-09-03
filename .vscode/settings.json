@@ -79,7 +79,11 @@
     "random": "cpp",
     "compare": "cpp",
     "any": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "charconv": "cpp",
+    "condition_variable": "cpp",
+    "numbers": "cpp",
+    "shared_mutex": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
