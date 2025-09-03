@@ -14,6 +14,8 @@
 #include "reference/reference.hpp"
 #include "dereference/dereference.hpp"
 #include "static/static_member.hpp"
+#include "conversion/explicit/explicit_.h"
+#include "conversion/implicit/implicit_.h"
 
 
 int main() {
@@ -61,6 +63,17 @@ int main() {
     
     obj1.instanceVar= 5;
     std::cout << "obj2의 instanceVar: " << obj2.instanceVar << std::endl;
+    
+    /* examine explicit_ */
+    explicit_ exp_1(10);
+    exp_1.print();
+    
+    explicit_ exp_2= 20;
+    exp_2.print();
+    
+    /* examine implicit_ */
+    implicit_ imp_1(10);
+    imp_1.test();
     
     return 0;
 }
