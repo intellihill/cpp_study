@@ -17,5 +17,6 @@ int main(int argc, const char * argv[]) {
     sw.MySwapPtr(&i, &j);
     sw.MySwapRef(i, j);
     sw.MySorting();
-    sw.exercise();
+//    sw.exercise();
+    sw.checkSorted(3, 2);
 }

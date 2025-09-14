@@ -62,3 +62,13 @@ void Swap::exercise() {
         }
     }
 }
+
+// TODO: checkSorted function 만들기. (정렬이 되어있으면 true, 안되어 있으면 false)
+void Swap::checkSorted(int a, int b) {
+    cout << boolalpha;
+    if (a < b) {
+        cout << a << " " << b << " " << bool(a < b) << endl;
+    } else {
+        cout << a << " " << b << " " << bool(a >= b) << endl;
+    }
+}

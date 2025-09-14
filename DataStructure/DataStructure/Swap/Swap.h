@@ -23,6 +23,8 @@ public:
     void MySwapRef(int& i, int& j);
     void MySorting();
     void exercise();
+    
+    void checkSorted(int a, int b);
 };
 
 #endif
