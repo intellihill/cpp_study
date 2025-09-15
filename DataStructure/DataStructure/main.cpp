@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Swap/Swap.h"
+#include "Selection/SelectionSort.hpp"
 
 int main(int argc, const char * argv[]) {
     int i= 3;
@@ -19,4 +20,8 @@ int main(int argc, const char * argv[]) {
     sw.MySorting();
 //    sw.exercise();
     sw.checkSorted(3, 2);
+    
+    SelectionSort ss;
+    
+    ss.process();
 }
