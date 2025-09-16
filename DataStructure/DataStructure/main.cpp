@@ -13,13 +13,13 @@ int main(int argc, const char * argv[]) {
     int i= 3;
     int j= 4;
     
-    Swap sw{1 ,2};
-    sw.MySwap();
-    sw.MySwapPtr(&i, &j);
-    sw.MySwapRef(i, j);
-    sw.MySorting();
+//    Swap sw{1 ,2};
+//    sw.MySwap();
+//    sw.MySwapPtr(&i, &j);
+//    sw.MySwapRef(i, j);
+//    sw.MySorting();
 //    sw.exercise();
-    sw.checkSorted(3, 2);
+//    sw.checkSorted(3, 2);
     
     SelectionSort ss;
     

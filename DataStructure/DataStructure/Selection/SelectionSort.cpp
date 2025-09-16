@@ -22,16 +22,24 @@ void SelectionSort::process() {
                 cout << " -> " << flush;
                 
                 //TODO: 정렬 하기
-                for (int z=0; z<size; ++z) {
-                    for (int y=z+1; y<size-1; ++y) {
-                        if(arr[z] > arr[y]) {
-                            int temp= arr[z];
-                            arr[z] = arr[y];
-                            arr[y] = temp;
-                        }
-                    }
+//                for (int z=0; z<size; ++z) {
+//                    for (int y=z+1; y<size-1; ++y) {
+//                        if(arr[z] > arr[y]) {
+//                            int temp= arr[z];
+//                            arr[z] = arr[y];
+//                            arr[y] = temp;
+//                        }
+//                    }
+//                }
+                if (arr[0] > arr[1]) {
+                    MySwapRef(arr[0], arr[1]);
                 }
-                
+                if (arr[1] > arr[2]) {
+                    MySwapRef(arr[1], arr[2]);
+                }
+                if (arr[0] > arr[1]) {
+                    MySwapRef(arr[0], arr[1]);
+                }
                 
                 for (int e=0; e<size; ++e) {
                     cout << arr[e] << " " << flush;
@@ -47,11 +55,18 @@ void SelectionSort::process() {
 
 bool SelectionSort::CheckSorted(int* arr, int size) {
     // TODO: 정렬 확인 함수 구현
+    // solved myself
+//    for (int i=0; i<size-1; ++i) {
+//        for (int j=i+1; j<size; ++j) {
+//            if (arr[i] > arr[j]) {
+//                return false;
+//            }
+//        }
+//    }
+    
     for (int i=0; i<size-1; ++i) {
-        for (int j=i+1; j<size; ++j) {
-            if (arr[i] > arr[j]) {
-                return false;
-            }
+        if (arr[i] > arr[i+1]) {
+            return false;
         }
     }
     

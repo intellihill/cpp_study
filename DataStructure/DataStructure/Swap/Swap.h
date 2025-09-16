@@ -16,7 +16,7 @@ private:
     int b;
     
 public:
-    Swap(int num1, int num2) : a(num1), b(num2) {}
+    Swap(){}
     
     void MySwap();
     void MySwapPtr(int* i, int* j);
