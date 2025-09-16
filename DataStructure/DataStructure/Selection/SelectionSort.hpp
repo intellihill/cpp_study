@@ -14,7 +14,7 @@ class SelectionSort {
 private:
 public:
     void process();
-    void CheckSorted();
+    bool CheckSorted(int* arr, int size);
 };
 
 #endif

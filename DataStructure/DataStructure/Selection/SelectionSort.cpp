@@ -22,20 +22,38 @@ void SelectionSort::process() {
                 cout << " -> " << flush;
                 
                 //TODO: 정렬 하기
+                for (int z=0; z<size; ++z) {
+                    for (int y=z+1; y<size-1; ++y) {
+                        if(arr[z] > arr[y]) {
+                            int temp= arr[z];
+                            arr[z] = arr[y];
+                            arr[y] = temp;
+                        }
+                    }
+                }
+                
                 
                 for (int e=0; e<size; ++e) {
                     cout << arr[e] << " " << flush;
                 }
                 
                 cout << boolalpha;
-                CheckSorted(); // 정렬 되었나 확인
+                cout << CheckSorted(arr, size); // 정렬 되었나 확인
                 cout << endl;
-                
             }
         }
     }
 }
 
-void SelectionSort::CheckSorted() {
-    cout << "test" << endl;
+bool SelectionSort::CheckSorted(int* arr, int size) {
+    // TODO: 정렬 확인 함수 구현
+    for (int i=0; i<size-1; ++i) {
+        for (int j=i+1; j<size; ++j) {
+            if (arr[i] > arr[j]) {
+                return false;
+            }
+        }
+    }
+    
+    return true;
 }
