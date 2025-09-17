@@ -20,6 +20,7 @@ public:
     void processThree();
     bool CheckSorted(int* arr, int size);
     int minNumber(int (&arr)[5]);
+    int minNumIndex(int (&arr)[5]);
 };
 
 #endif

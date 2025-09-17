@@ -90,3 +90,13 @@ int SelectionSort::minNumber(int (&arr)[5]) {
     
     return min_number;
 }
+
+int SelectionSort::minNumIndex(int (&arr)[5]) {
+    int size= sizeof(arr) / sizeof(arr[0]);
+    int min_index_number= arr[0];
+    for (int i=0; i<size-1; ++i) {
+        min_index_number= arr[i] < arr[i+1] ? i : i+1;
+    }
+    
+    return min_index_number;
+}

@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
     
     ss.processThree();
     int min= ss.minNumber(arr);
+    int minIndex= ss.minNumIndex(arr);
     
-    cout << min << endl;
+    cout << min << " " << minIndex << endl;
 }
