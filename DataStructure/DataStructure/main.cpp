@@ -10,8 +10,6 @@
 #include "Selection/SelectionSort.hpp"
 
 int main(int argc, const char * argv[]) {
-    int i= 3;
-    int j= 4;
     
 //    Swap sw{1 ,2};
 //    sw.MySwap();
@@ -23,5 +21,10 @@ int main(int argc, const char * argv[]) {
     
     SelectionSort ss;
     
-    ss.process();
+    int arr[] = {5,4,3,2,1};
+    
+    ss.processThree();
+    int min= ss.minNumber(arr);
+    
+    cout << min << endl;
 }

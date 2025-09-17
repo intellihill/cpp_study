@@ -8,7 +8,7 @@
 #include "SelectionSort.hpp"
 
 // 3개 정렬
-void SelectionSort::process() {
+void SelectionSort::processThree() {
     for (int k=0; k<3; ++k) {
         for (int j=0; j<3; ++j) {
             for (int i=0; i<3; ++i) {
@@ -71,4 +71,22 @@ bool SelectionSort::CheckSorted(int* arr, int size) {
     }
     
     return true;
+}
+
+int SelectionSort::minNumber(int (&arr)[5]) {
+
+//    int temp= arr[0];
+//    for (int i=0; i<4; ++i) {
+//        if (arr[i] > arr[i+1]) {
+//            temp= arr[i+1];
+//        }
+//    }
+//    return temp;
+    int size= sizeof(arr) / sizeof(arr[0]);
+    int min_number= arr[0];
+    for (int i=1; i<size; ++i) {
+        min_number= arr[i] < min_number ? arr[i] : min_number;
+    }
+    
+    return min_number;
 }

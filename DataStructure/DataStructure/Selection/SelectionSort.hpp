@@ -17,7 +17,9 @@ public:
     SelectionSort() : Swap() {}
     
     void process();
+    void processThree();
     bool CheckSorted(int* arr, int size);
+    int minNumber(int (&arr)[5]);
 };
 
 #endif
