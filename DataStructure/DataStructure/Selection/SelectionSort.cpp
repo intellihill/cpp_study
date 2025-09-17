@@ -92,11 +92,18 @@ int SelectionSort::minNumber(int (&arr)[5]) {
 }
 
 int SelectionSort::minNumIndex(int (&arr)[5]) {
+//    int size= sizeof(arr) / sizeof(arr[0]);
+//    int min_index_number= arr[0];
+//    for (int i=0; i<size-1; ++i) {
+//        min_index_number= arr[i] < arr[i+1] ? i : i+1;
+//    }
     int size= sizeof(arr) / sizeof(arr[0]);
-    int min_index_number= arr[0];
-    for (int i=0; i<size-1; ++i) {
-        min_index_number= arr[i] < arr[i+1] ? i : i+1;
+    int min_index= 0;
+    for (int j=1; j<size; ++j) {
+        if (ar[j] < arr[min_index]) {
+            min_index= j;
+        }
     }
     
-    return min_index_number;
+    return min_index;
 }
