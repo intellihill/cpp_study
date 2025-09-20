@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Swap/Swap.h"
 #include "Selection/SelectionSort.hpp"
+#include "Bubble/BubbleSort.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -29,4 +30,11 @@ int main(int argc, const char * argv[]) {
     ss.selectionSort(arr);
     
     cout << min << " " << minIndex << endl;
+    
+    cout << "Bubble Sort: " << endl;
+    
+    BubbleSort bs;
+    
+    bs.MyProcess();
+    
 }
