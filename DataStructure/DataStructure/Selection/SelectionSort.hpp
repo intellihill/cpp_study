@@ -8,6 +8,7 @@
 #ifndef SELECTION_SORT_H
 #define SELECTION_SORT_H
 #include <iostream>
+#include <fstream>
 #include "../Swap/Swap.h"
 using namespace std;
 
@@ -22,6 +23,9 @@ public:
     int minNumber(int (&arr)[5]);
     int minNumIndex(int (&arr)[5]);
     void selectionSort(int (&arr)[5]);
+    
+    void sortExample();
+    void StableSort();
 };
 
 #endif

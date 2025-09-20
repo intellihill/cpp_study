@@ -7,6 +7,11 @@
 
 #include "SelectionSort.hpp"
 
+struct Element {
+    int key;
+    char value;
+};
+
 // 3개 정렬
 void SelectionSort::processThree() {
     for (int k=0; k<3; ++k) {
@@ -127,4 +132,54 @@ void SelectionSort::selectionSort(int (&arr)[5]) {
     
     cout << endl;
     
+}
+
+// 비교 횟수 세보기, 더 효율적인 방법은 없을까?
+// https://en.wikipedia.org/wiki/Sorting_algorithm
+void SelectionSort::sortExample() {
+    ofstream ofile("log.txt");
+    for (int size=1; size<1000; ++size) {
+        int count= 0;
+        int* arr= new int[size];
+        for (int s=0; s<size; ++s) {
+            arr[s]= size - s;
+        }
+        
+        int min_index;
+        for (int i=0; i<size-1; ++i) {
+            min_index= i;
+            for (int j=i+1; j<size; ++j) {
+                count++;
+                
+                if(arr[j] < arr[min_index]) {
+                    min_index= j;
+                }
+                swap(arr[i], arr[min_index]);
+            }
+            
+            ofile << size << ", " << count << endl;
+            
+            delete[] arr;
+        }
+        
+        ofile.close();
+    }
+}
+
+
+void SelectionSort::StableSort() {
+    Element arr[] = { {2, 'a'}, {2, 'b'}, {1, 'c'} };
+    int size= sizeof(arr) / sizeof(arr[0]);
+    
+    int min_index;
+    
+    for (int i=0; i<size-1; ++i) {
+        min_index= i;
+        for (int j=i+1; j<size; ++j) {
+            if (arr[j].key < arr[min_index].key) {
+                min_index= j;
+            }
+            swap(arr[i], arr[min_index]);
+        }
+    }
 }
