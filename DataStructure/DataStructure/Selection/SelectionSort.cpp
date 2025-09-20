@@ -100,10 +100,31 @@ int SelectionSort::minNumIndex(int (&arr)[5]) {
     int size= sizeof(arr) / sizeof(arr[0]);
     int min_index= 0;
     for (int j=1; j<size; ++j) {
-        if (ar[j] < arr[min_index]) {
+        if (arr[j] < arr[min_index]) {
             min_index= j;
         }
     }
     
     return min_index;
+}
+
+void SelectionSort::selectionSort(int (&arr)[5]) {
+    int size= sizeof(arr) / sizeof(arr[0]);
+    
+    for (int i=0; i<size-1; ++i) {
+        for (int j=i+1; j<size; ++j) {
+            if (arr[i] > arr[j]) {
+                int temp= arr[i];
+                arr[i]= arr[j];
+                arr[j]= temp;
+            }
+        }
+    }
+    cout << "selection sort: " << flush;
+    for (int i=0; i<size; ++i) {
+        cout << arr[i] << " " << flush;
+    }
+    
+    cout << endl;
+    
 }
