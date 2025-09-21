@@ -15,6 +15,7 @@ class InsertSort : public PrintArray {
 public:
     InsertSort(int n) : PrintArray(n) {}
     void MyProcess ();
+    void TeacherProcess ();
 };
 
 #endif

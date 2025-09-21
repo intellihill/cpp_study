@@ -40,5 +40,6 @@ int main(int argc, const char * argv[]) {
     
     InsertSort is{5};
     is.MyProcess();
+    is.TeacherProcess();
     
 }
