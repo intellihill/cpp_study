@@ -42,7 +42,6 @@ void InsertSort::TeacherProcess() {
             Print(arr, size);
         }
         arr[j]= key;
-        Print(arr, size);
     }
     cout << endl;
 }
