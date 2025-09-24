@@ -45,3 +45,35 @@ void InsertSort::TeacherProcess() {
     }
     cout << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+void InsertSort::MyProcess1() {
+    int arr[]= { 1, 2, 4, 5, 3, 6 };
+    int size= sizeof(arr) / sizeof(arr[0]);
+    
+    cout << "MyProcess1 start" << endl;
+    
+    for (int i=1; i<size; i++) {
+        int key= arr[i];
+        int j= i;
+        
+        for (; j>0 && arr[j-1] > key; j--) {
+            arr[j]= arr[j-1];
+
+        }
+        
+        arr[j]= key;
+    }
+
+    Print(arr, 6);
+    
+}
