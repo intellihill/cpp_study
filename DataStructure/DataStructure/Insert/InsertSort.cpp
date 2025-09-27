@@ -68,7 +68,6 @@ void InsertSort::MyProcess1() {
         
         for (; j>0 && arr[j-1] > key; j--) {
             arr[j]= arr[j-1];
-
         }
         
         arr[j]= key;
