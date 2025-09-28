@@ -1,6 +1,0 @@
-"./file.txt" is a regular file.
-"./squares.txt" is a regular file.
-"./a.out" is a regular file.
-"./example.txt" is a regular file.
-"./test.txt" is a regular file.
-"./main.cpp" is a regular file.
