@@ -14,6 +14,9 @@ using namespace std;
 class InsertSort : public PrintArray {
 public:
     InsertSort(int n) : PrintArray(n) {}
+    
+    void InsertionSort(int (&arr)[], int n);
+    
     void MyProcess ();
     void TeacherProcess ();
     void MyProcess1 ();

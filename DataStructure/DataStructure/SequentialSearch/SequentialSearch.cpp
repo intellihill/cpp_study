@@ -7,9 +7,12 @@
 
 #include "SequentialSearch.hpp"
 #include "../Utils/Utils.hpp"
+#include "../Insert/InsertSort.hpp"
+#include "../Print/PrintArray.h"
 
 void SequenceSearch::processEx() {
     Utils util;
+    PrintArray print{0};
     
     // 정렬되지 않은 데이터를 가정
     int arr[]= { 8, 1, 1, 3, 2, 5, 1, 2, 1, 1 };
@@ -22,4 +25,19 @@ void SequenceSearch::processEx() {
     cout << "Count 2= " << util.Count(arr, size, 2) << endl;
     cout << "Count 8= " << util.Count(arr, size, 8) << endl;
     cout << "Count 1= " << util.Count(arr, size, 1) << endl;
+    cout << endl;
+    
+    cout << "Search 2= " << util.SequentialSearch(arr, size, 2) << endl;
+    cout << "Search 5= " << util.SequentialSearch(arr, size, 5) << endl;
+    cout << "Search 9= " << util.SequentialSearch(arr, size, 9) << endl;
+    
+    InsertSort is{0};
+    is.InsertionSort(arr, size);
+    print.Print(arr, size);
+    
+    cout << "Count 9= " << util.Count(arr, size, 9) << endl;
+    cout << "Count 2= " << util.Count(arr, size, 2) << endl;
+    cout << "Count 8= " << util.Count(arr, size, 8) << endl;
+    cout << "Count 1= " << util.Count(arr, size, 1) << endl;
+    
 }

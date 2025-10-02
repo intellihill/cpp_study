@@ -46,15 +46,17 @@ void InsertSort::TeacherProcess() {
     cout << endl;
 }
 
-
-
-
-
-
-
-
-
-
+void InsertSort::InsertionSort(int (&arr)[], int n) {
+    cout << "InsertionSort start: " << endl;
+    int i, key, j;
+    for (i=0; i<n; i++) {
+        key= arr[i];
+        for (j=i; j>0 && arr[j-1] > key; j--) {
+            arr[j]= arr[j-1];
+        }
+        arr[j]= key;
+    }
+}
 
 void InsertSort::MyProcess1() {
     int arr[]= { 1, 2, 4, 5, 3, 6 };
