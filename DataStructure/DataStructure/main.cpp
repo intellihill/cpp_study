@@ -10,6 +10,7 @@
 #include "Selection/SelectionSort.hpp"
 #include "Bubble/BubbleSort.hpp"
 #include "Insert/InsertSort.hpp"
+#include "SequentialSearch/SequentialSearch.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -42,5 +43,10 @@ int main(int argc, const char * argv[]) {
     is.MyProcess();
     is.TeacherProcess();
     is.MyProcess1();
+    
+    cout << "SequenceSearch start: " << endl;
+    SequenceSearch seqS;
+    
+    seqS.processEx();
     
 }

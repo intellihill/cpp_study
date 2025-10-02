@@ -10,10 +10,10 @@
 #include <iostream>
 using namespace std;
 
-class sequenceSearch {
+class SequenceSearch {
 public:
     void processEx();
-}
+};
 
 
 #endif
