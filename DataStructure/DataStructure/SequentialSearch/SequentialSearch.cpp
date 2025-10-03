@@ -35,9 +35,54 @@ void SequenceSearch::processEx() {
     is.InsertionSort(arr, size);
     print.Print(arr, size);
     
-    cout << "Count 9= " << util.Count(arr, size, 9) << endl;
-    cout << "Count 2= " << util.Count(arr, size, 2) << endl;
-    cout << "Count 8= " << util.Count(arr, size, 8) << endl;
-    cout << "Count 1= " << util.Count(arr, size, 1) << endl;
+    cout << "Count 9= " << SortedCount(arr, size, 9) << endl;
+    cout << "Count 2= " << SortedCount(arr, size, 2) << endl;
+    cout << "Count 8= " << SortedCount(arr, size, 8) << endl;
+    cout << "Count 1= " << SortedCount(arr, size, 1) << endl;
     
+}
+
+// 내가 구현한 SequenctialSearch
+int SequenceSearch::MySequentialSearch(int (&arr)[], int n, int target) {
+    int index= -1;
+    for (int i=0; i<n; ++i) {
+        if (arr[i] == target) {
+            index= i;
+            break;
+        }
+    }
+    return index;
+}
+// 선생님이 구현한 SequentialSearch
+// 배열 arr에 x가 있으면 Index 반환, 없으면 -1 반환
+int SequenceSearch::SequentialSearch(int (&arr)[], int n, int target) {
+    // Horowitz 교재
+    int i;
+    for (i=0; i<n && arr[i] != target; i++);
+    if (i==n) return -1;
+    else return i;
+}
+
+int SequenceSearch::SortedCount(int (&arr)[], int size, int target) {
+    int i= MySequentialSearch(arr, size, target);
+    
+    if (i >= 0) {
+        return 0;
+    } else {
+        return 0;
+    }
+    
+    return 0;
+}
+
+int SequenceSearch::SortedCountHelper(int *arr, int n, int x, int start) {
+    int count= 0;
+    for (int i=start; i<n; i++) {
+        if (arr[i] == x) {
+            count++;
+        } else {
+            break; //조기 종료
+        }
+    }
+    return count;
 }

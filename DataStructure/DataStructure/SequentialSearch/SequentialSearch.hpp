@@ -13,6 +13,10 @@ using namespace std;
 class SequenceSearch {
 public:
     void processEx();
+    int MySequentialSearch(int (&arr)[], int n, int target);
+    int SequentialSearch(int (&arr)[], int n, int target);
+    int SortedCount(int (&arr)[], int n, int target);
+    int SortedCountHelper(int* arr, int n, int x, int start);
 };
 
 
