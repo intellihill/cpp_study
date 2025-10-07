@@ -27,4 +27,4 @@ public:
     void checkSorted(int a, int b);
 };
 
-#endif
+#endif // !SWAP_H
