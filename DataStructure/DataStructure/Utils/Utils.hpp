@@ -14,6 +14,7 @@ using namespace std;
 class Utils {
 public:
     int Count(int (&arr)[], int n, int target);
+    int Count(char (&arr)[], int n, int target);
     int SequentialSearch(int (&arr)[], int n, int target);
 };
 

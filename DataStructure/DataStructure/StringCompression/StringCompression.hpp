@@ -11,8 +11,12 @@
 #include "../Insert/InsertSort.hpp"
 
 class StringCompression : public Utils, public InsertSort {
-    
+public:
+    StringCompression() : Utils(), InsertSort(1) {
+        
+    }
     void processEx();
+    
 };
 
 

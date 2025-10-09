@@ -16,6 +16,7 @@ public:
     InsertSort(int n) : PrintArray(n) {}
     
     void InsertionSort(int (&arr)[], int n);
+    void InsertionSort(char (&arr)[], int n);
     
     void MyProcess ();
     void TeacherProcess ();

@@ -30,7 +30,6 @@ void InsertSort::MyProcess() {
 // https://books.google.com/books?id=kse_7qbWbjsC&pg=PA116#v=onepage&q&f=false
 void InsertSort::TeacherProcess() {
     int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
-//    int arr[]= { 9, 4, 6, 5, 8};
     int size= sizeof(arr) / sizeof(arr[0]);
     cout << "TeacherInsertSort: " << endl;
     int i, key, j;
@@ -45,6 +44,19 @@ void InsertSort::TeacherProcess() {
     }
     cout << endl;
 }
+
+void InsertSort::InsertionSort(char (&arr)[], int n) {
+    cout << "InsertionSort char[] start: " << endl;
+    int i, key, j;
+    for (i=0; i<n; ++i) {
+        key= arr[i];
+        for (j=i; j>0 && arr[j-1] > key; j--) {
+            arr[j]= arr[j-1];
+        }
+        arr[j]= key;
+    }
+}
+
 
 void InsertSort::InsertionSort(int (&arr)[], int n) {
     cout << "InsertionSort start: " << endl;

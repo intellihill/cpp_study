@@ -17,6 +17,7 @@ public:
     PrintArray(int n) : size(n){}
     
     void Print(int (&arr)[], int n);
+    void Print(char (&arr)[], int n);
     
 };
 

@@ -29,11 +29,22 @@
 void StringCompression::processEx() {
     char arr[]= "ababcdfdceeefda";
     int size= sizeof(arr) - 1; // 마지막에 안보이는 \0 except
+    char table[26]= {0};
     
     InsertSort is{1};
+    is.InsertionSort(arr, size);
+    is.Print(arr, size);
     
+    for (int i=1; i<26; ++i) {
+        // 표를 만들고 나중에 몰아서 출력하는 방법
+        table[i]= Count(arr, size, char(i+97));
+        
+        // 표를 만들지 않고 직접 출력하는 방법
+        int count= Count(arr, size, char(i+97));
+        if (count > 0) {
+            cout << char(i+97) << table[i] << flush;
+        }
+    }
     
-    
-    
-    
+    is.Print(table, size);
 }

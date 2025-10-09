@@ -13,3 +13,10 @@ void PrintArray::Print(int (&arr)[], int n) {
     }
     cout << endl;
 }
+
+void PrintArray::Print(char (&arr)[], int n) {
+    for (int i=0; i<n; ++i) {
+        cout << arr[i] << " " << flush;
+    }
+    cout << endl;
+}

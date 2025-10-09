@@ -11,6 +11,7 @@
 #include "Bubble/BubbleSort.hpp"
 #include "Insert/InsertSort.hpp"
 #include "SequentialSearch/SequentialSearch.hpp"
+#include "StringCompression/StringCompression.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -49,4 +50,9 @@ int main(int argc, const char * argv[]) {
     
     seqS.processEx();
     
+    cout << "StringCompression start: " << endl;
+    StringCompression stringC;
+    
+    stringC.processEx();
+
 }
