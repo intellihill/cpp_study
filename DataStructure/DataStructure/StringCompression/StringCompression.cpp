@@ -31,7 +31,7 @@ void StringCompression::processEx() {
     int size= sizeof(arr) - 1; // 마지막에 안보이는 \0 except
     char table[26]= {0};
     
-    InsertSort is{1};
+    InsertSort<char> is{1};
     is.InsertionSort(arr, size);
     is.Print(arr, size);
     

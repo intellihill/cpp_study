@@ -7,7 +7,8 @@
 
 #include "InsertSort.hpp"
 
-void InsertSort::MyProcess() {
+template<typename T>
+void InsertSort<T>::MyProcess() {
     int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
 //    int arr[]= { 9, 4, 6, 5, 8};
     int size= sizeof(arr) / sizeof(arr[0]);
@@ -28,7 +29,8 @@ void InsertSort::MyProcess() {
 }
 
 // https://books.google.com/books?id=kse_7qbWbjsC&pg=PA116#v=onepage&q&f=false
-void InsertSort::TeacherProcess() {
+template<typename T>
+void InsertSort<T>::TeacherProcess() {
     int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
     int size= sizeof(arr) / sizeof(arr[0]);
     cout << "TeacherInsertSort: " << endl;
@@ -45,22 +47,13 @@ void InsertSort::TeacherProcess() {
     cout << endl;
 }
 
-void InsertSort::InsertionSort(char (&arr)[], int n) {
-    cout << "InsertionSort char[] start: " << endl;
-    int i, key, j;
-    for (i=0; i<n; ++i) {
-        key= arr[i];
-        for (j=i; j>0 && arr[j-1] > key; j--) {
-            arr[j]= arr[j-1];
-        }
-        arr[j]= key;
-    }
-}
 
 
-void InsertSort::InsertionSort(int (&arr)[], int n) {
+template<typename T>
+void InsertSort<T>::InsertionSort(T arr[], int n) {
     cout << "InsertionSort start: " << endl;
-    int i, key, j;
+    T key;
+    int i, j;
     for (i=0; i<n; i++) {
         key= arr[i];
         for (j=i; j>0 && arr[j-1] > key; j--) {
@@ -70,7 +63,20 @@ void InsertSort::InsertionSort(int (&arr)[], int n) {
     }
 }
 
-void InsertSort::MyProcess1() {
+//void InsertSort::InsertionSort(char (&arr)[], int n) {
+//    cout << "InsertionSort char[] start: " << endl;
+//    int i, key, j;
+//    for (i=0; i<n; ++i) {
+//        key= arr[i];
+//        for (j=i; j>0 && arr[j-1] > key; j--) {
+//            arr[j]= arr[j-1];
+//        }
+//        arr[j]= key;
+//    }
+//}
+
+template<typename T>
+void InsertSort<T>::MyProcess1() {
     int arr[]= { 1, 2, 4, 5, 3, 6 };
     int size= sizeof(arr) / sizeof(arr[0]);
     
