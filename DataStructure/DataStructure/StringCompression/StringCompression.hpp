@@ -10,14 +10,14 @@
 #include "../Utils/Utils.hpp"
 #include "../Insert/InsertSort.hpp"
 
-class StringCompression : public Utils, public InsertSort<char> {
-public:
-    StringCompression() : Utils(), InsertSort<char>(1) {
-        
-    }
-    void processEx();
-    
-};
+//class StringCompression : public Utils, public InsertSort<char> {
+//public:
+//    StringCompression() : Utils(), InsertSort<char>(1) {
+//        
+//    }
+//    void processEx();
+//    
+//};
 
 
 #endif // !STRING_COMPRESSION_H

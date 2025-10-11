@@ -26,14 +26,14 @@
 
 #include "StringCompression.hpp"
 
-void StringCompression::processEx() {
-    char arr[]= "ababcdfdceeefda";
-    int size= sizeof(arr) - 1; // 마지막에 안보이는 \0 except
-    char table[26]= {0};
-    
-    InsertSort<char> is{1};
-    is.InsertionSort(arr, size);
-    is.Print(arr, size);
+//void StringCompression::processEx() {
+//    char arr[]= "ababcdfdceeefda";
+//    int size= sizeof(arr) - 1; // 마지막에 안보이는 \0 except
+//    char table[26]= {0};
+//    
+//    InsertSort<char> is{1};
+//    is.InsertionSort(arr, size);
+//    is.Print(arr, size);
     
 //    for (int i=1; i<26; ++i) {
 //        // 표를 만들고 나중에 몰아서 출력하는 방법
@@ -46,26 +46,26 @@ void StringCompression::processEx() {
 //        }
 //    }
     
-    cout << arr << endl;
-    char c= arr[0];
-    int count= 1;
-    
-    cout << c;
-    
-    for (int i=1; i<size; i++) {
-        if (arr[i] == c) {
-            count++;
-        } else {
-            cout << count;
-            
-            count= 1;
-            c= arr[i];
-            
-            cout << c;
-        }
-    }
-    
-    cout << count << endl;
-    
-    is.Print(table, size);
-}
+//    cout << arr << endl;
+//    char c= arr[0];
+//    int count= 1;
+//    
+//    cout << c;
+//    
+//    for (int i=1; i<size; i++) {
+//        if (arr[i] == c) {
+//            count++;
+//        } else {
+//            cout << count;
+//            
+//            count= 1;
+//            c= arr[i];
+//            
+//            cout << c;
+//        }
+//    }
+//    
+//    cout << count << endl;
+//    
+//    is.Print(table, size);
+//}

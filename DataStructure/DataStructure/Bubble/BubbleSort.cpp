@@ -59,15 +59,21 @@ void BubbleSort<T>::MyProcess() {
 
 template<typename T>
 void BubbleSort<T>::BbSort(T arr[], int size) {
-    
+    cout << "Bubble Sort start: " << endl;
+    this -> PrintArray(arr, size);
     int i, j;
     for (i=0; i<size-1; i++) {
-        for (j=i+1; j<size; j++) {
-            if (arr[i] > arr[j]) {
-                int tmp= arr[i];
-                arr[j]= arr[i];
-                arr[j]= tmp;
+        for (j=0; j<size-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                T tmp= arr[j];
+                arr[j]= arr[j+1];
+                arr[j+1]= tmp;
             }
         }
     }
+    this -> PrintArray(arr, size);
 }
+
+// explicit instantiation
+template class BubbleSort<int>;
+template class BubbleSort<char>;

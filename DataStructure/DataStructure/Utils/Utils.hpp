@@ -14,7 +14,7 @@ using namespace std;
 template<typename T>
 class Utils {
 public:
-    int PrintArray(T arr[], int size);
+    void PrintArray(T arr[], int size);
     int Count(T arr[], int n, int target);
     int SequentialSearch(int (&arr)[], int n, int target);
 };
