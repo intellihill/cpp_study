@@ -31,7 +31,7 @@ void SequenceSearch::processEx() {
     cout << "Search 5= " << util.SequentialSearch(arr, size, 5) << endl;
     cout << "Search 9= " << util.SequentialSearch(arr, size, 9) << endl;
     
-    InsertSort is{0};
+    InsertSort<int> is{0};
     is.InsertionSort(arr, size);
     print.Print(arr, size);
     

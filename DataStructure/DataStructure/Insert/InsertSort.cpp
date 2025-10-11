@@ -10,7 +10,6 @@
 template<typename T>
 void InsertSort<T>::MyProcess() {
     int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
-//    int arr[]= { 9, 4, 6, 5, 8};
     int size= sizeof(arr) / sizeof(arr[0]);
     cout << "MyInsertSort: " << endl;
     

@@ -35,16 +35,37 @@ void StringCompression::processEx() {
     is.InsertionSort(arr, size);
     is.Print(arr, size);
     
-    for (int i=1; i<26; ++i) {
-        // 표를 만들고 나중에 몰아서 출력하는 방법
-        table[i]= Count(arr, size, char(i+97));
-        
-        // 표를 만들지 않고 직접 출력하는 방법
-        int count= Count(arr, size, char(i+97));
-        if (count > 0) {
-            cout << char(i+97) << table[i] << flush;
+//    for (int i=1; i<26; ++i) {
+//        // 표를 만들고 나중에 몰아서 출력하는 방법
+//        table[i]= Count(arr, size, char(i+97));
+//        
+//        // 표를 만들지 않고 직접 출력하는 방법
+//        int count= Count(arr, size, char(i+97));
+//        if (count > 0) {
+//            cout << char(i+97) << table[i] << flush;
+//        }
+//    }
+    
+    cout << arr << endl;
+    char c= arr[0];
+    int count= 1;
+    
+    cout << c;
+    
+    for (int i=1; i<size; i++) {
+        if (arr[i] == c) {
+            count++;
+        } else {
+            cout << count;
+            
+            count= 1;
+            c= arr[i];
+            
+            cout << c;
         }
     }
+    
+    cout << count << endl;
     
     is.Print(table, size);
 }

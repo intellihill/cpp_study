@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     
     bs.MyProcess();
     
-    InsertSort is{5};
+    InsertSort<int> is{5};
     is.MyProcess();
     is.TeacherProcess();
     is.MyProcess1();
