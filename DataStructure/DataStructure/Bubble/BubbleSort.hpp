@@ -9,9 +9,11 @@
 #define BUBBLE_SORT_H
 #include <iostream>
 
+template<typename T>
 class BubbleSort {
 public:
     void MyProcess();
+    void BbSort(T arr[], int size);
 };
 
-#endif
+#endif // !BUBBLE_SORT_H

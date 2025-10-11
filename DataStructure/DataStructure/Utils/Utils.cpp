@@ -7,17 +7,8 @@
 
 #include "Utils.hpp"
 
-int Utils::Count(int (&arr)[], int n, int target) {
-    int count= 0;
-    for (int i=0; i<n; ++i) {
-        if (arr[i] == target) {
-            count++;
-        }
-    }
-    
-    return count;
-}
-int Utils::Count(char (&arr)[], int n, int target) {
+template<typename T>
+int Utils<T>::Count(T arr[], int n, int target) {
     int count= 0;
     for (int i=0; i<n; ++i) {
         if (arr[i] == target) {
@@ -28,7 +19,8 @@ int Utils::Count(char (&arr)[], int n, int target) {
     return count;
 }
 
-int Utils::SequentialSearch(int (&arr)[], int n, int target) {
+template<typename T>
+int Utils<T>::SequentialSearch(int (&arr)[], int n, int target) {
     int index= -1;
     for (int i=0; i<n; ++i) {
         if (arr[i] == target) {

@@ -7,7 +7,8 @@
 
 #include "BubbleSort.hpp"
 
-void BubbleSort::MyProcess() {
+template<typename T>
+void BubbleSort<T>::MyProcess() {
     int arr[]= { 8, 3, 2, 5, 1, 1, 2};
     int n= sizeof(arr) / sizeof(arr[0]);
     
@@ -54,4 +55,19 @@ void BubbleSort::MyProcess() {
         std::cout << arr[i] << " " << std::flush;
     }
     std::cout << std::endl;
+}
+
+template<typename T>
+void BubbleSort<T>::BbSort(T arr[], int size) {
+    
+    int i, j;
+    for (i=0; i<size-1; i++) {
+        for (j=i+1; j<size; j++) {
+            if (arr[i] > arr[j]) {
+                int tmp= arr[i];
+                arr[j]= arr[i];
+                arr[j]= tmp;
+            }
+        }
+    }
 }

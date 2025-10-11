@@ -11,11 +11,12 @@
 #include <iostream>
 using namespace std;
 
+template<typename T>
 class Utils {
 public:
-    int Count(int (&arr)[], int n, int target);
-    int Count(char (&arr)[], int n, int target);
+    int PrintArray(T arr[], int size);
+    int Count(T arr[], int n, int target);
     int SequentialSearch(int (&arr)[], int n, int target);
 };
 
-#endif
+#endif // !UTILS_FUNCTION_H

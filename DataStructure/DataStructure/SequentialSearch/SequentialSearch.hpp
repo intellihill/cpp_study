@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif
+#endif // !SEQUENCTIAL_SEARCH_H
