@@ -12,20 +12,20 @@
 #include "../Swap/Swap.h"
 using namespace std;
 
-class SelectionSort : public Swap {
-private:
-public:
-    SelectionSort() : Swap() {}
-    
-    void process();
-    void processThree();
-    bool CheckSorted(int* arr, int size);
-    int minNumber(int (&arr)[5]);
-    int minNumIndex(int (&arr)[5]);
-    void selectionSort(int (&arr)[5]);
-    
-    void sortExample();
-    void StableSort();
-};
+//class SelectionSort : public Swap {
+//private:
+//public:
+//    SelectionSort() : Swap() {}
+//    
+//    void process();
+//    void processThree();
+//    bool CheckSorted(int* arr, int size);
+//    int minNumber(int (&arr)[5]);
+//    int minNumIndex(int (&arr)[5]);
+//    void selectionSort(int (&arr)[5]);
+//    
+//    void sortExample();
+//    void StableSort();
+//};
 
 #endif

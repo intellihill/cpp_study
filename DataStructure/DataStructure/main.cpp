@@ -6,7 +6,7 @@
 //
 
 #include <iostream>
-//#include "Swap/Swap.h"
+#include "Swap/Swap.h"
 //#include "Selection/SelectionSort.hpp"
 #include "Bubble/BubbleSort.hpp"
 //#include "Insert/InsertSort.hpp"
@@ -36,6 +36,8 @@ int main(int argc, const char * argv[]) {
 //    cout << min << " " << minIndex << endl;
 //    
 //    cout << "Bubble Sort: " << endl;
+    Swap<int> swap;
+    swap.MySwap(3, 4);
 
     BubbleSort<int> bbSort;
     

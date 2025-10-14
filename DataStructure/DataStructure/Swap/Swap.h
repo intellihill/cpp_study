@@ -10,21 +10,18 @@
 #include <iostream>
 using namespace std;
 
+template<typename T>
 class Swap {
-private:
-    int a;
-    int b;
-    
 public:
     Swap(){}
     
-    void MySwap();
-    void MySwapPtr(int* i, int* j);
-    void MySwapRef(int& i, int& j);
-    void MySorting();
-    void exercise();
-    
-    void checkSorted(int a, int b);
+    void MySwap(T a, T b);
+    void MySwapPtr(T* i, T* j);
+//    void MySwapRef(int& i, int& j);
+//    void MySorting();
+//    void exercise();
+//    
+//    void checkSorted(int a, int b);
 };
 
 #endif // !SWAP_H
