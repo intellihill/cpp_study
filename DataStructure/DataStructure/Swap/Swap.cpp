@@ -31,15 +31,16 @@ void Swap<T>::MySwapPtr(T* i, T* j) {
 }
 
 // TODO: Reference를 활용해서 받은 파라미터로 바꿔주기
-//void Swap::MySwapRef(int& i, int& j) {
-//    cout << "MySwapRef before: " << i << " " << j << endl;
-//    
-//    int temp= i;
-//    i= j;
-//    j= temp;
-//    
-//    cout << "MySwapRef after: " << i << " " << j << endl;
-//}
+template<typename T>
+void Swap<T>::MySwapRef(T& i, T& j) {
+    cout << "MySwapRef before: " << i << " " << j << endl;
+    
+    T temp= i;
+    i= j;
+    j= temp;
+    
+    cout << "MySwapRef after: " << i << " " << j << endl;
+}
 
 // TODO: 정렬(sorting)
 //void Swap::MySorting() {

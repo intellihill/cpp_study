@@ -37,7 +37,8 @@ int main(int argc, const char * argv[]) {
 //    
 //    cout << "Bubble Sort: " << endl;
     Swap<int> swap;
-    swap.MySwap(3, 4);
+    swap.MySwapRef(arr[0], arr[1]);
+    
 
     BubbleSort<int> bbSort;
     

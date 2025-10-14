@@ -17,7 +17,7 @@ public:
     
     void MySwap(T a, T b);
     void MySwapPtr(T* i, T* j);
-//    void MySwapRef(int& i, int& j);
+    void MySwapRef(T& i, T& j);
 //    void MySorting();
 //    void exercise();
 //    
