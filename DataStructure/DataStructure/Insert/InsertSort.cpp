@@ -13,12 +13,10 @@ void InsertSort<T>::MyProcess() {
     int size= sizeof(arr) / sizeof(arr[0]);
     cout << "MyInsertSort: " << endl;
     for (int i=1; i<size-1; ++i) {
+        int key= arr[i];
+        
         for (int j=i; j>0; --j) {
-            if (arr[j] < arr[j-1]) {
-                int tmp= arr[j];
-                arr[j]= arr[j-1];
-                arr[j-1]= tmp;
-            }
+            
         }
     }
     PrintArray(arr, size);
