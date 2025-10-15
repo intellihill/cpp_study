@@ -8,13 +8,13 @@
 #ifndef INSERT_SORT_H
 #define INSERT_SORT_H
 #include <iostream>
-#include "../Print/PrintArray.h"
+#include "../Utils/Utils.hpp"
 using namespace std;
 
 template<typename T>
-class InsertSort : public PrintArray {
+class InsertSort : public Utils<int> {
 public:
-    InsertSort(int n) : PrintArray(n) {}
+    InsertSort() {}
     
     void InsertionSort(T arr[], int n);
     

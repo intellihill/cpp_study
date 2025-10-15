@@ -12,20 +12,38 @@ void InsertSort<T>::MyProcess() {
     int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
     int size= sizeof(arr) / sizeof(arr[0]);
     cout << "MyInsertSort: " << endl;
-    
-    
-    for (int i=0; i<size; ++i) {
-        for (int j=0; j<i; ++j) {
-            if (arr[i-j] < arr[i-j-1]) {
-                int temp= arr[i-j];
-                arr[i-j]= arr[i-j-1];
-                arr[i-j-1]= temp;
-                Print(arr, size);
+    for (int i=1; i<size-1; ++i) {
+        for (int j=i; j>0; --j) {
+            if (arr[j] < arr[j-1]) {
+                int tmp= arr[j];
+                arr[j]= arr[j-1];
+                arr[j-1]= tmp;
             }
         }
-        cout << endl;
     }
+    PrintArray(arr, size);
 }
+
+
+//template<typename T>
+//void InsertSort<T>::MyProcess() {
+//    int arr[]= { 4, 3, 2, 10, 12, 1, 5, 6 };
+//    int size= sizeof(arr) / sizeof(arr[0]);
+//    cout << "MyInsertSort: " << endl;
+//    
+//    
+//    for (int i=0; i<size; ++i) {
+//        for (int j=0; j<i; ++j) {
+//            if (arr[i-j] < arr[i-j-1]) {
+//                int temp= arr[i-j];
+//                arr[i-j]= arr[i-j-1];
+//                arr[i-j-1]= temp;
+//                Print(arr, size);
+//            }
+//        }
+//        cout << endl;
+//    }
+//}
 
 // https://books.google.com/books?id=kse_7qbWbjsC&pg=PA116#v=onepage&q&f=false
 template<typename T>
@@ -39,7 +57,7 @@ void InsertSort<T>::TeacherProcess() {
         
         for (j=i; j>0 && arr[j-1] > key; j--) {
             arr[j]= arr[j-1];
-            Print(arr, size);
+//            Print(arr, size);
         }
         arr[j]= key;
     }
@@ -91,7 +109,6 @@ void InsertSort<T>::MyProcess1() {
         
         arr[j]= key;
     }
-
-    Print(arr, 6);
-    
 }
+
+template class InsertSort<int>;

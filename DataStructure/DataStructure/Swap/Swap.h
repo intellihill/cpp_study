@@ -18,10 +18,6 @@ public:
     void MySwap(T a, T b);
     void MySwapPtr(T* i, T* j);
     void MySwapRef(T& i, T& j);
-//    void MySorting();
-//    void exercise();
-//    
-//    void checkSorted(int a, int b);
 };
 
 #endif // !SWAP_H

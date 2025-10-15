@@ -9,7 +9,7 @@
 #include "Swap/Swap.h"
 //#include "Selection/SelectionSort.hpp"
 #include "Bubble/BubbleSort.hpp"
-//#include "Insert/InsertSort.hpp"
+#include "Insert/InsertSort.hpp"
 //#include "SequentialSearch/SequentialSearch.hpp"
 //#include "StringCompression/StringCompression.hpp"
 
@@ -36,13 +36,13 @@ int main(int argc, const char * argv[]) {
 //    cout << min << " " << minIndex << endl;
 //    
 //    cout << "Bubble Sort: " << endl;
-    Swap<int> swap;
-    swap.MySwapRef(arr[0], arr[1]);
-    
 
     BubbleSort<int> bbSort;
     
     bbSort.BbSort(arr, size);
+    
+    InsertSort<int> isSort;
+    isSort.MyProcess();
     
 //    InsertSort<int> is{5};
 //    is.MyProcess();
