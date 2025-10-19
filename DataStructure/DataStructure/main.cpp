@@ -26,14 +26,4 @@ int main(int argc, const char * argv[]) {
     SelectionSort<int> slSort;
     slSort.SelectSort(arr, size);
 
-//    cout << "SequenceSearch start: " << endl;
-//    SequenceSearch seqS;
-//    
-//    seqS.processEx();
-    
-//    cout << "StringCompression start: " << endl;
-//    StringCompression stringC;
-//    
-//    stringC.processEx();
-
 }

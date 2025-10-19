@@ -16,7 +16,7 @@ template<typename T>
 class Utils : public Swap<T> {
 public:
     void PrintArray(T arr[], int size);
-    int Count(T arr[], int n, int target);
+    int Count(T arr[], int size, int target);
     int SequentialSearch(int (&arr)[], int n, int target);
 };
 

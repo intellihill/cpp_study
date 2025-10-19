@@ -17,9 +17,9 @@ void Utils<T>::PrintArray(T arr[], int size) {
 }
 
 template<typename T>
-int Utils<T>::Count(T arr[], int n, int target) {
+int Utils<T>::Count(T arr[], int size, int target) {
     int count= 0;
-    for (int i=0; i<n; ++i) {
+    for (int i=0; i<size; ++i) {
         if (arr[i] == target) {
             count++;
         }
