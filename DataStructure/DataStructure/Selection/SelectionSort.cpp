@@ -5,8 +5,30 @@
 //  Created by 정대로 on 9/15/25.
 //
 
-//#include "SelectionSort.hpp"
-//
+#include "SelectionSort.hpp"
+
+template<typename T>
+void SelectionSort<T>::SelectSort(T arr[], int size) {
+    cout << "SelectionSort start: " << endl;
+//    Utils<T> util;
+    int min_index;
+    int count= 0;
+    for (int i=0; i<size-1; i++) {
+        min_index= i;
+        for (int j=i+1; j<size; j++) {
+            count++;
+            
+            if (arr[j] < arr[min_index]) {
+                min_index= j;
+            }
+            MySwapRef(arr[i], arr[min_index]);
+        }
+    }
+    PrintArray(arr, size);
+};
+
+template class SelectionSort<int>;
+
 //struct Element {
 //    int key;
 //    char value;

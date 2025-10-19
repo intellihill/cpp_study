@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include "Swap/Swap.h"
-//#include "Selection/SelectionSort.hpp"
+#include "Selection/SelectionSort.hpp"
 #include "Bubble/BubbleSort.hpp"
 #include "Insert/InsertSort.hpp"
 //#include "SequentialSearch/SequentialSearch.hpp"
@@ -22,6 +22,9 @@ int main(int argc, const char * argv[]) {
     
     InsertSort<int> isSort;
     isSort.InsertionSort(arr, size);
+    
+    SelectionSort<int> slSort;
+    slSort.SelectSort(arr, size);
 
 //    cout << "SequenceSearch start: " << endl;
 //    SequenceSearch seqS;

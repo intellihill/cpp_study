@@ -7,10 +7,13 @@
 
 #ifndef SELECTION_SORT_H
 #define SELECTION_SORT_H
-#include <iostream>
-#include <fstream>
-#include "../Swap/Swap.h"
-using namespace std;
+#include "../Utils/Utils.hpp"
+
+template<typename T>
+class SelectionSort : public Utils<int>{
+public:
+    void SelectSort(T arr[], int size);
+};
 
 //class SelectionSort : public Swap {
 //private:

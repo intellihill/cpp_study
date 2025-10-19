@@ -8,7 +8,6 @@
 #include "SequentialSearch.hpp"
 #include "../Utils/Utils.hpp"
 #include "../Insert/InsertSort.hpp"
-#include "../Print/PrintArray.h"
 
 //void SequenceSearch::processEx() {
 //    Utils util;
