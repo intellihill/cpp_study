@@ -30,14 +30,10 @@ int Utils<T>::Count(T arr[], int size, int target) {
 
 template<typename T>
 int Utils<T>::SequentialSearch(int (&arr)[], int n, int target) {
-    int index= -1;
-    for (int i=0; i<n; ++i) {
-        if (arr[i] == target) {
-            index= i;
-            break;
-        }
-    }
-    return index;
+    int i;
+    for (i=0; i<n && arr[i] != target; i++) {/* Do nothing */};
+    if (i==n) return -1;
+    else return i;
 }
     
 // explicit instantiation
