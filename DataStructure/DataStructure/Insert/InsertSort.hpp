@@ -17,10 +17,8 @@ public:
     InsertSort() {}
     
     void InsertionSort(T arr[], int n);
-    
-    void MyProcess ();
+
     void TeacherProcess ();
-    void MyProcess1 ();
 };
 
 #endif

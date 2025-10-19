@@ -16,39 +16,13 @@
 int main(int argc, const char * argv[]) {
     int arr[]= {5, 4, 3, 2, 1};
     int size= sizeof(arr)/sizeof(arr[0]);
-//    Swap sw{1 ,2};
-//    sw.MySwap();
-//    sw.MySwapPtr(&i, &j);
-//    sw.MySwapRef(i, j);
-//    sw.MySorting();
-//    sw.exercise();
-//    sw.checkSorted(3, 2);
-    
-//    SelectionSort ss;
-//    
-//    int arr[] = {5,4,3,2,1};
-//    
-//    ss.processThree();
-//    int min= ss.minNumber(arr);
-//    int minIndex= ss.minNumIndex(arr);
-//    ss.selectionSort(arr);
-//    
-//    cout << min << " " << minIndex << endl;
-//    
-//    cout << "Bubble Sort: " << endl;
 
     BubbleSort<int> bbSort;
-    
     bbSort.BbSort(arr, size);
     
     InsertSort<int> isSort;
-    isSort.MyProcess();
-    
-//    InsertSort<int> is{5};
-//    is.MyProcess();
-//    is.TeacherProcess();
-//    is.MyProcess1();
-//    
+    isSort.InsertionSort(arr, size);
+
 //    cout << "SequenceSearch start: " << endl;
 //    SequenceSearch seqS;
 //    
